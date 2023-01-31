@@ -7,7 +7,7 @@ namespace apiwhitef.Controllers
 {
     [ApiController]
     [Route("v1/products")]
-    public class ProductController : ControllerBase 
+    public class ProductController : ControllerBase
     {
         [HttpGet]
         [Route("")]
@@ -15,7 +15,7 @@ namespace apiwhitef.Controllers
         {
             return await context.Products.Include(x => x.Category).ToListAsync();
         }
-        
+
         [HttpGet]
         [Route("{id:int}")]
         public async Task<ActionResult<Product>> GetById([FromServices] DataContext context, int id)

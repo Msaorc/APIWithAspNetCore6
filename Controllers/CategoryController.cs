@@ -32,6 +32,6 @@ namespace apiwhitef.Controllers
             context.Categories.Add(model);
             await context.SaveChangesAsync();
             return model;
-        }        
+        }
     }
 }
